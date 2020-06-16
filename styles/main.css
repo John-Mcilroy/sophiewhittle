@@ -251,7 +251,7 @@ hr {
         display: flex;
         position: absolute;
         height: 80vh;
-        background: var(--primary-background);
+        background: blue;
         color: var(--title-primary);
         flex-direction: column;
         justify-content: space-around;
