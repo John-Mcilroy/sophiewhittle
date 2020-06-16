@@ -250,8 +250,7 @@ hr {
         z-index: -1;
         display: flex;
         position: absolute;
-        margin-top: 3vh;
-        height: 82vh;
+        height: 80vh;
         background: var(--primary-background);
         color: var(--title-primary);
         flex-direction: column;
