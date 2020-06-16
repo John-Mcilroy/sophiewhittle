@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sophie Whittle - Photography Portfolio</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fsa8wwz.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fsa8wwz.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="hamburger" onclick="openMenu()">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+            <div class="title">
+                <h1>Sophie Whittle</h1>
+                <p>Photography</p>
+            </div>
+            <hr>
+            <ul class="categories" id="categories">
+
+                <li><a>Photos</a></li>
+                <li><a>Instagram</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+            
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="images">
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828818/sophie/101010293_536708483688092_1963599648333496320_n_g1bjrp.jpg" 
+                    alt="Hi I'm a Caleb!" 
+                    onclick="openModal()" 
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828818/sophie/101540613_549371772441236_3313386287532081152_n_hk5kgf.jpg" 
+                    alt="Tree-sus Christ" 
+                    onclick="openModal()"
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828816/sophie/101866017_1424846051021875_2639429708889980928_n_sdo7sa.jpg" 
+                    alt="Photograph Description" 
+                    onclick="openModal()"
+                    class="image"
+                >
+
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828816/sophie/102340278_262418654815276_1198999498601267200_n_ipvgkp.jpg" 
+                    alt="Photograph Description" 
+                    onclick="openModal()"
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828816/sophie/101674975_2639318233006380_4062716093360242688_n_aq8ovq.jpg" 
+                    alt="Doggo Dave" 
+                    onclick="openModal()"
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828815/sophie/101838401_560749367918433_2063528114083856384_n_nfze4s.jpg" 
+                    alt="Photograph Description" 
+                    onclick="openModal()"
+                    class="image"
+                >
+
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828817/sophie/100870838_283127332722538_4809469545876029440_n_cwdhgx.jpg" 
+                    alt="Photograph Description" 
+                    onclick="openModal()"
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828817/sophie/61980331_2410428309191152_9159896637877780480_n_cwszfm.jpg" 
+                    alt="Peek-a-boo!" 
+                    onclick="openModal()"
+                    class="image"
+                >
+                <img 
+                    src="https://res.cloudinary.com/mcilroy/image/upload/w_700/v1591828817/sophie/100843184_290578058634614_5032969795599859712_n_vrdxzn.jpg" 
+                    alt="You i-sss food-sss?" 
+                    onclick="openModal()"
+                    class="image"
+                >
+            </div>
+            <div class="scroll"></div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="img-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+:root {
+    --primary-background: #3E3E3E;
+    --secondary-background: #ECECEC;
+
+    --title-primary: #CFCFCF;
+    
+    --shadow: #626262;
+    --content: #707070;
+    --categories: #858585;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat, montserrat-alternates, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    background: var(--secondary-background);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    overflow-y: hidden;
+}
+
+/* ----- Sidebar Styles ----- */
+
+.sidebar {
+    background: var(--primary-background);
+    display: absolute;
+    flex: 25%;
+    min-width: 25%;
+    max-width: 25%;
+    height: 100vh;
+}
+
+.title {
+    width: 70%;
+    margin: auto;
+    padding: 6vh 0 7vh 0;
+}
+
+.title > h1:before {
+    content: "Sophie Whittle";
+    position: absolute;
+    margin: -3px 0 0 -2px;
+    color: var(--title-primary);
+}
+
+.title > h1 {
+    font-family: voluta-script-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    color: var(--shadow);
+    text-align: center;
+}
+
+.title > p {
+    text-transform: uppercase;
+    color: var(--shadow);
+    text-align: right;
+    font-size: 1.1vw;
+    margin-top: -3vw;
+    letter-spacing: .3em;
+    font-weight: 900;
+}
+
+hr {
+    width: 65%;
+    border: 1px solid var(--content);
+    float: right;
+}
+
+.categories {
+    padding: 3vh 0 0 6vh;
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    justify-items: left;
+    align-content: space-around;
+}
+
+.categories > li {
+    list-style: none;
+    font-size: 1.75vw;
+}
+
+.categories > li > a {
+    color: var(--categories);
+    text-decoration: none;
+}
+
+.categories > li > a:hover {
+    transition: all 300ms;
+    color: #CFCFCF;
+}
+
+#active {
+    color: var(--shadow);
+    cursor: default;
+}
+
+#active:before {
+    content: "Landscape";
+    position: absolute;
+    color: var(--title-primary);
+    margin: -2px 0 0 -2px;
+}
+
+/* ----- Main Section ----- */
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.image {
+    flex: 33.3%;
+    max-width: 33.3%;
+    height: 33.4vh;
+    min-height: 33.4vh;
+    transition: all 400ms;
+    filter: grayscale(80%) blur(1px);
+}
+
+.image:hover {
+    filter: none;
+}
+
+/* Modal */
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.9);
+    }
+    
+    /* Modal Content (image) */
+.modal-content {
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Add Animation */
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 700ms;
+  }
+  
+  @keyframes zoom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+  }
+
+  /* Less than 600px */
+  @media only screen and (max-width: 600px) {
+
+    .container {
+        overflow: scroll;
+    }
+    
+    .sidebar {
+        flex: 100%;
+        z-index: 5;
+        position: fixed;
+        min-width: 100%;
+        height: 18vh;
+    }
+
+    .title {
+        z-index: 9;
+        background: var(--primary-background);
+        padding: 3vh;
+    }
+    .title > h1 {
+        font-size: 16vw;
+    }
+
+    .title > p {
+        font-size: 3.5vw;
+        text-align: center;
+        padding-left: 15vw;
+        margin-top: -5vh;
+    }
+
+    .categories {
+        z-index: -1;
+        display: flex;
+        position: absolute;
+        margin-top: 3vh;
+        height: 83vh;
+        background: var(--primary-background);
+        color: var(--title-primary);
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        transform: translateY(-100%);
+        transition: all 300ms;
+    }
+
+    .categories > li {
+        display: block; 
+        cursor: pointer;
+        font-size: 4vw;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        margin: 8px 16px;
+    }
+
+    .hamburger-line {
+        z-index: 10;
+        width: 4vh;
+        height: .5vw;
+        background-color: var(--title-primary);
+        margin: 8px 0;
+        border-radius: 10px;
+    }
+
+    .menu-open {
+        transform: translateY(0);
+        transition: all 300ms;
+    }
+
+    .images {
+        margin-top: 18vh
+    }
+
+    .image {
+        flex: 100%;
+        min-width: 100%;
+    }    
+  }
+
+  /* less than 1280px */
