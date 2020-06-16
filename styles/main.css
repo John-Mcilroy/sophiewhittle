@@ -250,8 +250,8 @@ hr {
         z-index: -1;
         display: flex;
         position: absolute;
-        height: 80vh;
-        background: blue;
+        height: 82vh;
+        background: var(--primary-background);
         color: var(--title-primary);
         flex-direction: column;
         justify-content: space-around;
@@ -297,6 +297,10 @@ hr {
         flex: 100%;
         min-width: 100%;
     }    
+
+    .modal {
+        padding-top: 20vh;
+    }
   }
 
   /* less than 1280px */
